@@ -1,0 +1,83 @@
+@import '../../../variables.scss';
+
+.reports_container {
+  .countries {
+    mat-chip-list {
+      display: flex;
+      align-items: stretch;
+      flex-wrap: wrap;
+      width: calc(100% - 5px);
+      min-height: 232px;
+
+      mat-chip {
+        background-color: $backgroundNormalTransparent;
+        color: $elementsPrimaryColor;
+        text-shadow: 0px 1px 1px #000;
+
+        .confirmed {
+          color: $confirmedColor;
+        }
+
+        .recovered {
+          color: $recoveredColor;
+        }
+
+        .death {
+          color: $deathColor;
+        }
+
+        &.mat-chip-selected {
+          background-color: $backgroundAccentTransparent;
+          border: 1px solid $pillBorder;
+
+          .death {
+            color: $deathColorSelected;
+            text-shadow: none;
+          }
+        }
+      }
+    }
+
+    .control-bar {
+      display: flex;
+      padding: 16px 0;
+
+      .status {
+        flex: 1;
+
+        .mat-radio-button {
+          margin-right: 10px;
+        }
+      }
+
+      mat-paginator {
+        flex: 1;
+        background-color: $elementsAccentBgColor;
+        color: $elementsAccentColor;
+
+        ::ng-deep {
+          .mat-paginator-container {
+            min-height: 30px;
+
+            .mat-button-base {
+              line-height: 28px;
+              height: 28px;
+            }
+          }
+        }
+      }
+
+      @media (max-width: 840px) {
+        flex-flow: column-reverse;
+
+        .status {
+          margin-top: 16px;
+        }
+      }
+    }
+  }
+
+  .angular-highchart {
+    height: 340px;
+  }
+}
