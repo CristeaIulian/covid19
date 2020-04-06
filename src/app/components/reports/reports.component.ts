@@ -5,7 +5,7 @@ import { Chart } from 'angular-highcharts';
 import { HttpService } from '../../services/http/http.service';
 import { CovidService } from '../../services/covid/covid.service';
 
-import { CountryInfo, PageRange } from '../../interfaces';
+import { CountryInfo, PageRange, States } from '../../interfaces';
 
 @Component({
   selector: 'app-reports',
@@ -22,9 +22,9 @@ export class ReportsComponent implements OnInit {
   data = [];
   pageSize = 20;
   peopleStatuses = [
-    { value: 'confirmed', checked: true },
-    { value: 'recovered', checked: false },
-    { value: 'deaths', checked: false }
+    { value: States.confirmed, checked: true },
+    { value: States.recovered, checked: false },
+    { value: States.deaths, checked: false }
   ];
   peopleStateSelected = 'confirmed';
   showHighchart = false;
