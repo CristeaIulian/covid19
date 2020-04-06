@@ -5,6 +5,8 @@ import { Chart } from 'angular-highcharts';
 import { HttpService } from '../../services/http/http.service';
 import { CovidService } from '../../services/covid/covid.service';
 
+import { CountryInfo, PageRange } from '../../interfaces';
+
 @Component({
   selector: 'app-reports',
   templateUrl: './reports.component.html',
@@ -36,65 +38,22 @@ export class ReportsComponent implements OnInit {
     this.getCountries();
   }
 
-  prepareDataForGraph() {
-    const oCategories = {};
-
-    this.countriesSelected.forEach(countrySlug => {
-      Object.keys(this.data[countrySlug]).forEach(date => {
-        oCategories[date] = undefined;
-      });
-    });
-
-    const categories = Object.keys(oCategories).sort();
-
-    const series = [];
-    this.countriesSelected.forEach(countrySlug => {
-      const newSerie = {
-        name: this.getCountryName(countrySlug),
-        data: Array(categories.length).fill(0)
-      };
-
-      Object.keys(this.data[countrySlug]).forEach(date => {
-        const dateIndex = categories.indexOf(date);
-        newSerie.data[dateIndex] = this.data[countrySlug][date][
-          this.getCurrentState()
-        ];
-      });
-      series.push(newSerie);
-    });
-
-    return {
-      categories,
-      series
-    };
-  }
-
-  getCountryName(countrySlug: string) {
-    return this.countries.full.find(country => country.Slug === countrySlug)
-      .Country;
-  }
-
-  getCurrentState() {
-    return this.peopleStatuses.find(status => status.checked).value;
-  }
-
-  changeState($event) {
-    this.peopleStatuses.forEach((status, index) => {
-      this.peopleStatuses[index].checked =
-        $event.value === status.value ? true : false;
-    });
-    this.generateGraph();
-  }
-
-  generateGraph() {
-    const { categories, series } = this.prepareDataForGraph();
+  generateGraph(): void {
+    const { categories, series } = this.covidService.getDataForGraph(
+      this.countriesSelected,
+      this.countries,
+      this.data,
+      this.peopleStatuses
+    );
 
     this.angularHighchart = new Chart({
       chart: {
         type: 'line'
       },
       title: {
-        text: `Covid-19 / Countries (${this.getCurrentState()})`
+        text: `Covid-19 / Countries (${this.covidService.getCurrentState(
+          this.peopleStatuses
+        )})`
       },
       credits: {
         enabled: false
@@ -106,7 +65,7 @@ export class ReportsComponent implements OnInit {
     });
   }
 
-  getCountries() {
+  getCountries(): void {
     const path = 'summary';
     this.httpService.getData(path).subscribe((data: any) => {
       this.countries.full = [];
@@ -130,7 +89,7 @@ export class ReportsComponent implements OnInit {
     });
   }
 
-  chipClick(country) {
+  chipClick(country: CountryInfo): void {
     this.countries.partial.forEach((item, index) => {
       if (country.index === item.index) {
         this.countries.partial[index].selected = !item.selected;
@@ -151,7 +110,7 @@ export class ReportsComponent implements OnInit {
     this.getDataByCountry(country);
   }
 
-  getDataByCountry(country: any) {
+  getDataByCountry(country: CountryInfo): void {
     if (!this.data[country.Slug]) {
       const paths = [];
       this.peopleStatuses.forEach(status =>
@@ -169,14 +128,14 @@ export class ReportsComponent implements OnInit {
     }
   }
 
-  handlePage(e: any) {
+  handlePage(e: any): PageRange {
     return {
       start: e.pageIndex * e.pageSize,
       end: (e.pageIndex + 1) * e.pageSize
     };
   }
 
-  handleCountriesPage(e: any) {
+  handleCountriesPage(e: any): void {
     const { start, end } = this.handlePage(e);
     this.countries.partial = this.countries.full.slice(start, end);
   }
