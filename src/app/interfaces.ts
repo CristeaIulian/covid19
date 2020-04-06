@@ -47,6 +47,13 @@ export interface PageRange {
   end: number;
 }
 
+export interface PaginatorPreviousPage {
+  previousPageIndex: number;
+  pageIndex: number;
+  pageSize: number;
+  length: number;
+}
+
 export interface Status {
   confirmed: number;
   recovered: number;

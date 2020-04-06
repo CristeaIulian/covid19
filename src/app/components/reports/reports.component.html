@@ -24,7 +24,7 @@
           </mat-radio-button>
         </mat-radio-group>
       </div>
-      <mat-paginator [length]="countries.full.length" [pageSize]="pageSize" (page)="handleCountriesPage($event)">
+      <mat-paginator [length]="countries.full.length" [pageSize]="pageSize" (page)="handlePage($event)">
       </mat-paginator>
     </div>
   </div>

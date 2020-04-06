@@ -6,7 +6,8 @@ import { catchError, tap } from 'rxjs/operators';
 
 @Injectable({ providedIn: 'root' })
 export class HttpService {
-  private apiUrl = 'https://api.covid19api.com/';
+  private apiCovidUrl = 'https://api.covid19api.com/';
+  private apiRegresUrl = 'https://reqres.in/';
 
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -15,7 +16,7 @@ export class HttpService {
   constructor(private http: HttpClient) {}
 
   getData(path): Observable<any[]> {
-    return this.http.get<any[]>(this.apiUrl + path).pipe(
+    return this.http.get<any[]>(this.apiCovidUrl + path).pipe(
       tap(_ => this.log('fetched data')),
       catchError(this.handleError<any[]>('getData', []))
     );
@@ -24,17 +25,19 @@ export class HttpService {
   getDataAll(paths): Observable<any[]>[] {
     const endpoints = [];
     paths.forEach(path => {
-      endpoints.push(this.http.get(this.apiUrl + path));
+      endpoints.push(this.http.get(this.apiCovidUrl + path));
     });
 
     return endpoints;
   }
 
   addData(path, data): Observable<any> {
-    return this.http.post<any>(this.apiUrl + path, data, this.httpOptions).pipe(
-      tap(response => this.log(`added data w/ ${response}`)),
-      catchError(this.handleError<any>('addData'))
-    );
+    return this.http
+      .post<any>(this.apiRegresUrl + path, data, this.httpOptions)
+      .pipe(
+        tap(response => this.log(`added data w/ ${response}`)),
+        catchError(this.handleError<any>('addData'))
+      );
   }
 
   private handleError<T>(operation = 'operation', result?: T) {

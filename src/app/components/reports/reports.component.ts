@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { forkJoin } from 'rxjs';
 import { Chart } from 'angular-highcharts';
+import { MatRadioChange } from '@angular/material/radio';
 
 import { HttpService } from '../../services/http/http.service';
 import { CovidService } from '../../services/covid/covid.service';
 
-import { CountryInfo, PageRange, States } from '../../interfaces';
+import { CountryInfo, PaginatorPreviousPage, States } from '../../interfaces';
 
 @Component({
   selector: 'app-reports',
@@ -128,15 +129,18 @@ export class ReportsComponent implements OnInit {
     }
   }
 
-  handlePage(e: any): PageRange {
-    return {
-      start: e.pageIndex * e.pageSize,
-      end: (e.pageIndex + 1) * e.pageSize
-    };
+  changeState(e: MatRadioChange) {
+    this.peopleStatuses.forEach((status, index) => {
+      this.peopleStatuses[index].checked =
+        e.value === status.value ? true : false;
+    });
+    this.generateGraph();
   }
 
-  handleCountriesPage(e: any): void {
-    const { start, end } = this.handlePage(e);
-    this.countries.partial = this.countries.full.slice(start, end);
+  handlePage($event: PaginatorPreviousPage): void {
+    this.countries.partial = this.countries.full.slice(
+      $event.pageIndex * $event.pageSize,
+      ($event.pageIndex + 1) * $event.pageSize
+    );
   }
 }

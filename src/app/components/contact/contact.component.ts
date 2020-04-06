@@ -23,7 +23,7 @@ export class ContactComponent {
   ) {}
 
   onSubmit(): void {
-    const path = 'https://reqres.in/api/users';
+    const path = 'api/users';
     this.httpService
       .addData(path, this.contactForm.value)
       .subscribe(response => {
