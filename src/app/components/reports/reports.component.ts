@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { PageEvent } from '@angular/material/paginator';
-import { MatRadioChange } from '@angular/material/radio';
+import { LegacyPageEvent as PageEvent } from '@angular/material/legacy-paginator';
+import { MatLegacyRadioChange as MatRadioChange } from '@angular/material/legacy-radio';
 
 import * as Highcharts from 'highcharts';
 
