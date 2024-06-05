@@ -8,13 +8,13 @@ mat-expansion-panel {
   background-color: transparent;
 
   &.mat-expanded {
-    background-color: $elementsAccentBgColor;
+    //background-color: $elementsAccentBgColor;
     color: $elementsAccentColor;
     opacity: .9;
   }
 
   mat-expansion-panel-header {
-    background-color: $elementsAccentBgColor;
+    //background-color: $elementsAccentBgColor;
     opacity: .9;
 
     mat-panel-title {
@@ -22,7 +22,7 @@ mat-expansion-panel {
     }
 
     &:hover {
-      background-color: $elementsAccentBgColor !important;
+      //background-color: $elementsAccentBgColor !important;
       opacity: 1;
     }
   }

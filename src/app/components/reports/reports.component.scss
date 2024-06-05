@@ -10,9 +10,9 @@
       min-height: 232px;
 
       mat-chip {
-        background-color: $backgroundNormalTransparent;
+        //background-color: $backgroundNormalTransparent;
         color: $elementsPrimaryColor;
-        text-shadow: 0px 1px 1px #000;
+        text-shadow: 0 1px 1px #000;
 
         .confirmed {
           color: $confirmedColor;
@@ -23,12 +23,12 @@
         }
 
         .death {
-          color: $deathColor;
+          //color: $deathColor;
         }
 
         &.mat-chip-selected {
-          background-color: $backgroundAccentTransparent;
-          border: 1px solid $pillBorder;
+          //background-color: $backgroundAccentTransparent;
+          //border: 1px solid $pillBorder;
 
           .death {
             color: $deathColorSelected;
@@ -52,7 +52,7 @@
 
       mat-paginator {
         flex: 1;
-        background-color: $elementsAccentBgColor;
+        //background-color: $elementsAccentBgColor;
         color: $elementsAccentColor;
 
         ::ng-deep {
