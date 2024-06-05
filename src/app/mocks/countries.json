@@ -1,0 +1,182 @@
+[
+  {
+    "countryName": "Afghanistan",
+    "countryCode": "AF",
+    "slug": "afghanistan",
+    "totalConfirmed": 23,
+    "totalDeaths": 3,
+    "totalRecovered": 14,
+    "index": 1
+  },
+  {
+    "countryName": "Albania",
+    "countryCode": "AL",
+    "slug": "albania",
+    "totalConfirmed": 77,
+    "totalDeaths": 3,
+    "totalRecovered": 55,
+    "index": 2
+  },
+  {
+    "countryName": "Algeria",
+    "countryCode": "DZ",
+    "slug": "algeria",
+    "totalConfirmed": 456,
+    "totalDeaths": 4,
+    "totalRecovered": 45,
+    "index": 3
+  },
+  {
+    "countryName": "Andorra",
+    "countryCode": "AD",
+    "slug": "andorra",
+    "totalConfirmed": 4467,
+    "totalDeaths": 34,
+    "totalRecovered": 1543,
+    "index": 4
+  },
+  {
+    "countryName": "Angola",
+    "countryCode": "AO",
+    "slug": "angola",
+    "totalConfirmed": 344,
+    "totalDeaths": 12,
+    "totalRecovered": 234,
+    "index": 5
+  },
+  {
+    "countryName": "Antigua and Barbuda",
+    "countryCode": "AG",
+    "slug": "antigua-and-barbuda",
+    "totalConfirmed": 23,
+    "totalDeaths": 3,
+    "totalRecovered": 14,
+    "index": 6
+  },
+  {
+    "countryName": "Argentina",
+    "countryCode": "AR",
+    "slug": "argentina",
+    "totalConfirmed": 456,
+    "totalDeaths": 4,
+    "totalRecovered": 45,
+    "index": 7
+  },
+  {
+    "countryName": "Armenia",
+    "countryCode": "AM",
+    "slug": "armenia",
+    "totalConfirmed": 4467,
+    "totalDeaths": 34,
+    "totalRecovered": 1543,
+    "index": 8
+  },
+  {
+    "countryName": "Australia",
+    "countryCode": "AU",
+    "slug": "australia",
+    "totalConfirmed": 344,
+    "totalDeaths": 12,
+    "totalRecovered": 234,
+    "index": 9
+  },
+  {
+    "countryName": "Austria",
+    "countryCode": "AT",
+    "slug": "austria",
+    "totalConfirmed": 23,
+    "totalDeaths": 3,
+    "totalRecovered": 14,
+    "index": 10
+  },
+  {
+    "countryName": "Azerbaijan",
+    "countryCode": "AZ",
+    "slug": "azerbaijan",
+    "totalConfirmed": 77,
+    "totalDeaths": 3,
+    "totalRecovered": 55,
+    "index": 11
+  },
+  {
+    "countryName": "Bahamas",
+    "countryCode": "BS",
+    "slug": "bahamas",
+    "totalConfirmed": 456,
+    "totalDeaths": 4,
+    "totalRecovered": 45,
+    "index": 12
+  },
+  {
+    "countryName": "Bahrain",
+    "countryCode": "BH",
+    "slug": "bahrain",
+    "totalConfirmed": 4467,
+    "totalDeaths": 34,
+    "totalRecovered": 1543,
+    "index": 13
+  },
+  {
+    "countryName": "Bangladesh",
+    "countryCode": "BD",
+    "slug": "bangladesh",
+    "totalConfirmed": 344,
+    "totalDeaths": 12,
+    "totalRecovered": 234,
+    "index": 14
+  },
+  {
+    "countryName": "Barbados",
+    "countryCode": "BB",
+    "slug": "barbados",
+    "totalConfirmed": 23,
+    "totalDeaths": 3,
+    "totalRecovered": 14,
+    "index": 15
+  },
+  {
+    "countryName": "Belarus",
+    "countryCode": "BY",
+    "slug": "belarus",
+    "totalConfirmed": 456,
+    "totalDeaths": 4,
+    "totalRecovered": 45,
+    "index": 16
+  },
+  {
+    "countryName": "Belgium",
+    "countryCode": "BE",
+    "slug": "belgium",
+    "totalConfirmed": 4467,
+    "totalDeaths": 34,
+    "totalRecovered": 1543,
+    "index": 17
+  },
+  {
+    "countryName": "Belize",
+    "countryCode": "BZ",
+    "slug": "belize",
+    "totalConfirmed": 344,
+    "totalDeaths": 12,
+    "totalRecovered": 234,
+    "index": 18
+  },
+  {
+    "countryName": "Benin",
+    "countryCode": "BJ",
+    "slug": "benin",
+    "totalConfirmed": 23,
+    "totalDeaths": 3,
+    "totalRecovered": 14,
+    "index": 19
+  },
+  {
+    "countryName": "Bhutan",
+    "countryCode": "BT",
+    "slug": "bhutan",
+    "totalConfirmed": 77,
+    "totalDeaths": 3,
+    "totalRecovered": 55,
+    "index": 20
+  }
+]

@@ -1,60 +1,22 @@
 import { Injectable } from '@angular/core';
 
-import {
-  CountryDetails,
-  CountryInfoFull,
-  GraphStructure,
-  States,
-  Status,
-  StatusDetails
-} from '../../interfaces';
+import { CountryInfoFull, GraphStructure, States, Status, StatusDetails } from '../../interfaces';
 
 @Injectable({ providedIn: 'root' })
 export class CovidService {
-  constructor() {}
-
-  extractData(data: CountryDetails[][]): Status[] {
-    const result = [];
-    data.forEach(resultSet => {
-      resultSet.forEach(info => {
-        const date = info.Date.split('T')[0];
-
-        if (!result[date]) {
-          result[date] = { confirmed: 0, recovered: 0, deaths: 0 };
-        }
-
-        if (info.Status === 'confirmed') {
-          result[date].confirmed += info.Cases;
-        }
-        if (info.Status === 'recovered') {
-          result[date].recovered += info.Cases;
-        }
-        if (info.Status === 'deaths') {
-          result[date].deaths += info.Cases;
-        }
-      });
-    });
-    return result;
-  }
-
   getCountryName(countrySlug: string, countries: CountryInfoFull): string {
-    return countries.full.find(country => country.Slug === countrySlug).Country;
+    return countries.full.find((country) => country.slug === countrySlug).countryName;
   }
 
   getCurrentState(peopleStatuses: StatusDetails[]): States {
-    return peopleStatuses.find(status => status.checked).value;
+    return peopleStatuses.find((status) => status.checked).value;
   }
 
-  getDataForGraph(
-    countriesSelected: string[],
-    countries: CountryInfoFull,
-    data: Status[],
-    peopleStatuses: StatusDetails[]
-  ): GraphStructure {
+  getDataForGraph(countriesSelected: string[], countries: CountryInfoFull, data: Record<string, Status>[], peopleStatus: States): GraphStructure {
     const oCategories = {};
 
-    countriesSelected.forEach(countrySlug => {
-      Object.keys(data[countrySlug]).forEach(date => {
+    countriesSelected.forEach((countrySlug): void => {
+      Object.keys(data[countrySlug]).forEach((date): void => {
         oCategories[date] = undefined;
       });
     });
@@ -62,23 +24,22 @@ export class CovidService {
     const categories = Object.keys(oCategories).sort();
 
     const series = [];
-    countriesSelected.forEach(countrySlug => {
-      const newSerie = {
+    countriesSelected.forEach((countrySlug): void => {
+      const newSeries = {
         name: this.getCountryName(countrySlug, countries),
-        data: Array(categories.length).fill(0)
+        data: Array(categories.length).fill(0),
       };
 
-      Object.keys(data[countrySlug]).forEach(date => {
+      Object.keys(data[countrySlug]).forEach((date): void => {
         const dateIndex = categories.indexOf(date);
-        newSerie.data[dateIndex] =
-          data[countrySlug][date][this.getCurrentState(peopleStatuses)];
+        newSeries.data[dateIndex] = data[countrySlug][date][peopleStatus];
       });
-      series.push(newSerie);
+      series.push(newSeries);
     });
 
     return {
       categories,
-      series
+      series,
     };
   }
 }

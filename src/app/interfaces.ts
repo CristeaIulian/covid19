@@ -1,25 +1,16 @@
 export enum States {
   confirmed = 'confirmed',
   recovered = 'recovered',
-  deaths = 'deaths'
-}
-
-export interface CountryDetails {
-  Country: string;
-  CountryCode: string;
-  Lat: string;
-  Lon: string;
-  Cases: number;
-  Status: States;
-  Date: string;
+  deaths = 'deaths',
 }
 
 export interface CountryInfo {
-  Country: string;
-  Slug: string;
-  TotalConfirmed: number;
-  TotalDeaths: number;
-  TotalRecovered: number;
+  countryName: string;
+  countryCode: string;
+  slug: string;
+  totalConfirmed: number;
+  totalDeaths: number;
+  totalRecovered: number;
   index: number;
   selected: boolean;
   color: string;
@@ -30,7 +21,7 @@ export interface CountryInfoFull {
   partial: CountryInfo[];
 }
 
-interface HighchartData {
+interface HighchartsData {
   name: string;
   data: number[];
   _colorIndex?: number;
@@ -39,19 +30,7 @@ interface HighchartData {
 
 export interface GraphStructure {
   categories: string[];
-  series: HighchartData[];
-}
-
-export interface PageRange {
-  start: number;
-  end: number;
-}
-
-export interface PaginatorPreviousPage {
-  previousPageIndex: number;
-  pageIndex: number;
-  pageSize: number;
-  length: number;
+  series: HighchartsData[];
 }
 
 export interface Status {

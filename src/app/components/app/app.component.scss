@@ -3,7 +3,8 @@
 .main {
   &::after {
     content: "";
-    background-image: url("/assets/"+ $backgroundPath);
+    //background-image: url("/assets/"+ $backgroundPath);
+    background-color: #233D54;
     top: 0;
     left: 0;
     bottom: 0;
@@ -27,7 +28,8 @@
 
     &::after {
       content: "";
-      background-image: url("/assets/"+ $backgroundPath);
+      //background-image: url("/assets/"+ $backgroundPath);
+      background-color: #233D54;
       background-position: calc((100vw - 1000px) / 2 * -1) calc((100vh - 100vh - 100px));
       top: 0;
       left: 0;

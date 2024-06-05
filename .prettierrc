@@ -1,0 +1,16 @@
+{
+  "semi": true,
+  "trailingComma": "all",
+  "printWidth": 160,
+  "useTabs": false,
+  "bracketSpacing": true,
+  "arrowParens": "always",
+  "overrides": [
+    {
+      "files": ["*.html", "legacy/**/*.js"],
+      "options": {
+        "tabWidth": 4
+      }
+    }
+  ]
+}

@@ -1,5 +1,6 @@
-[{
-    "title": "Aboud COVID-19",
+[
+  {
+    "title": "About COVID-19",
     "content": "Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered coronavirus.<br /> <br /> Most people infected with the COVID - 19 virus will experience mild to moderate respiratory illness and recover without requiring special treatment. Older people, and those with underlying medical problems like cardiovascular disease, diabetes, chronic respiratory disease, and cancer are more likely to develop serious illness.<br /> <br /> The best way to prevent and slow down transmission is be well informed about the COVID - 19 virus, the disease it causes and how it spreads.Protect yourself and others from infection by washing your hands or using an alcohol based rub frequently and not touching your face.<br /> <br /> The COVID - 19 virus spreads primarily through droplets of saliva or discharge from the nose when an infected person coughs or sneezes, so it’ s important that you also practice respiratory etiquette(for example, by coughing into a flexed elbow).<br /> <br /> At this time, there are no specific vaccines or treatments for COVID - 19. However, there are many ongoing clinical trials evaluating potential treatments. WHO will continue to provide updated information as soon as clinical findings become available."
   },
   {
@@ -16,11 +17,11 @@
   },
   {
     "title": "How severe is COVID-19 infection?",
-    "content": "At this point, there is too little data available to say with certainty how severe COVID-19 is but preliminary findings indicate that it is less fatal than SARS coronavirus."
+    "content": "At this point, there is too little data available to say with certainty how severe COVID-19 is but preliminary findings indicate that it is less fatal than SARS coronavirus."
   },
   {
     "title": "Where can I get tested?",
-    "content": "If your doctor believes there is a need for a laboratory test for SARS-CoV-2/ COVID-19, he/she will inform you of the procedure to follow and advise which laboratory can perform the test. Several laboratories in Europe can process SARS - CoV - 2 samples. Please turn to your doctor or health authorities for further, more detailed information."
+    "content": "If your doctor believes there is a need for a laboratory test for SARS-CoV-2/ COVID-19, he/she will inform you of the procedure to follow and advise which laboratory can perform the test. Several laboratories in Europe can process SARS - CoV - 2 samples. Please turn to your doctor or health authorities for further, more detailed information."
   },
   {
     "title": "Is it safe to fly? Is the plane cabin air clean?",
@@ -32,12 +33,13 @@
   },
   {
     "title": "Why is the number of cases increasing so rapidly?",
-    "content": "Two of the main reasons for the rapid increase in the number of cases are that the virus is spreading from one person to another and that the capacity to detect cases is improving. This is why a sudden increase in the number of cases is often observed during the initial phase of an outbreak of an emerging disease."
+    "content": "Two of the main reasons for the rapid increase in the number of cases are that the virus is spreading from one person to another and that the capacity to detect cases is improving. This is why a sudden increase in the number of cases is often observed during the initial phase of an outbreak of an emerging disease."
   },
   {
     "title": "How long this outbreak will last?",
     "content": "Quarantine is the separation and monitoring of people who have been exposed to an infected person (or have been to an outbreak area) to see if they become ill.This separation helps reduce the risk that the quarantined person will spread the disease.Quarantine generally requires a person to remain in a nominated place or at home for a certain period of time after exposure to a disease.The duration of quarantine will vary depending on the estimated incubation period.For COVID - 19, early estimates indicate a quarantine duration of 14 days. Isolation is the separation of people who are ill with a potentially contagious disease from those who are healthy."
-  }, {
+  },
+  {
     "title": "What should I do if I'm sick?",
     "content": "Stay home<br /> Call your doctor and report your symptoms. Do not go to the waiting room or the emergency department. The doctor will determine by telephone whether you can stay ill at home or should go to hospital."
   }

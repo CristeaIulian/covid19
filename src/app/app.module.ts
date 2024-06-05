@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { RouterModule, Routes } from '@angular/router';
 
 import { MatButtonModule } from '@angular/material/button';
 import { MatChipsModule } from '@angular/material/chips';
@@ -24,18 +23,8 @@ import { ContactComponent } from './components/contact/contact.component';
 import { GeneralInfoComponent } from './components/general-info/general-info.component';
 import { ReportsComponent } from './components/reports/reports.component';
 
-const appRoutes: Routes = [
-  { path: '', component: GeneralInfoComponent },
-  { path: 'reports', component: ReportsComponent },
-  { path: 'contact', component: ContactComponent }
-];
 @NgModule({
-  declarations: [
-    AppComponent,
-    ContactComponent,
-    GeneralInfoComponent,
-    ReportsComponent
-  ],
+  declarations: [AppComponent, ContactComponent, GeneralInfoComponent, ReportsComponent],
   imports: [
     AppRoutingModule,
     BrowserAnimationsModule,
@@ -53,12 +42,8 @@ const appRoutes: Routes = [
     MatRippleModule,
     MatSnackBarModule,
     ReactiveFormsModule,
-    RouterModule.forRoot(
-      appRoutes
-      // { enableTracing: true } // <-- debugging purposes only
-    )
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -1,0 +1,330 @@
+{
+  "AF": {
+    "2024-03-02": { "confirmed": 4905, "recovered": 236, "deaths": 43 },
+    "2024-03-01": { "confirmed": 4854, "recovered": 344, "deaths": 57 },
+    "2024-02-29": { "confirmed": 4800, "recovered": 234, "deaths": 23 },
+    "2024-02-28": { "confirmed": 4756, "recovered": 123, "deaths": 12 },
+    "2024-02-27": { "confirmed": 4700, "recovered": 345, "deaths": 45 },
+    "2024-02-26": { "confirmed": 4650, "recovered": 234, "deaths": 23 },
+    "2024-02-25": { "confirmed": 4600, "recovered": 123, "deaths": 12 },
+    "2024-02-24": { "confirmed": 4550, "recovered": 345, "deaths": 45 },
+    "2024-02-23": { "confirmed": 4500, "recovered": 234, "deaths": 23 },
+    "2024-02-22": { "confirmed": 4450, "recovered": 123, "deaths": 12 },
+    "2024-02-21": { "confirmed": 4400, "recovered": 345, "deaths": 45 },
+    "2024-02-20": { "confirmed": 4350, "recovered": 234, "deaths": 23 }
+  },
+  "AL": {
+    "2024-03-02": { "confirmed": 54787, "recovered": 534, "deaths": 874 },
+    "2024-03-01": { "confirmed": 2378, "recovered": 473, "deaths": 86 },
+    "2024-02-29": { "confirmed": 83567, "recovered": 326, "deaths": 574 },
+    "2024-02-28": { "confirmed": 768476, "recovered": 23432, "deaths": 2335 },
+    "2024-02-27": { "confirmed": 3455, "recovered": 234, "deaths": 654 },
+    "2024-02-26": { "confirmed": 2346, "recovered": 77, "deaths": 455 },
+    "2024-02-25": { "confirmed": 2545, "recovered": 123, "deaths": 12 },
+    "2024-02-24": { "confirmed": 7777, "recovered": 21345, "deaths": 566 },
+    "2024-02-23": { "confirmed": 23434, "recovered": 2344, "deaths": 663 },
+    "2024-02-22": { "confirmed": 12212, "recovered": 5535, "deaths": 234 },
+    "2024-02-21": { "confirmed": 77564, "recovered": 23444, "deaths": 443 },
+    "2024-02-20": { "confirmed": 423, "recovered": 55, "deaths": 23 }
+  },
+  "DZ": {
+    "2024-03-02": { "confirmed": 54787, "recovered": 534, "deaths": 874 },
+    "2024-03-01": { "confirmed": 2378, "recovered": 473, "deaths": 86 },
+    "2024-02-29": { "confirmed": 83567, "recovered": 326, "deaths": 574 },
+    "2024-02-28": { "confirmed": 768476, "recovered": 23432, "deaths": 2335 },
+    "2024-02-27": { "confirmed": 3455, "recovered": 234, "deaths": 654 },
+    "2024-02-26": { "confirmed": 2346, "recovered": 77, "deaths": 455 },
+    "2024-02-25": { "confirmed": 2545, "recovered": 123, "deaths": 12 },
+    "2024-02-24": { "confirmed": 7777, "recovered": 21345, "deaths": 566 },
+    "2024-02-23": { "confirmed": 23434, "recovered": 2344, "deaths": 663 },
+    "2024-02-22": { "confirmed": 12212, "recovered": 5535, "deaths": 234 },
+    "2024-02-21": { "confirmed": 77564, "recovered": 23444, "deaths": 443 },
+    "2024-02-20": { "confirmed": 423, "recovered": 55, "deaths": 23 }
+  },
+  "AD": {
+    "2024-03-02": { "confirmed": 54787, "recovered": 534, "deaths": 874 },
+    "2024-03-01": { "confirmed": 2378, "recovered": 473, "deaths": 86 },
+    "2024-02-29": { "confirmed": 83567, "recovered": 326, "deaths": 574 },
+    "2024-02-28": { "confirmed": 768476, "recovered": 23432, "deaths": 2335 },
+    "2024-02-27": { "confirmed": 3455, "recovered": 234, "deaths": 654 },
+    "2024-02-26": { "confirmed": 2346, "recovered": 77, "deaths": 455 },
+    "2024-02-25": { "confirmed": 2545, "recovered": 123, "deaths": 12 },
+    "2024-02-24": { "confirmed": 7777, "recovered": 21345, "deaths": 566 },
+    "2024-02-23": { "confirmed": 23434, "recovered": 2344, "deaths": 663 },
+    "2024-02-22": { "confirmed": 12212, "recovered": 5535, "deaths": 234 },
+    "2024-02-21": { "confirmed": 77564, "recovered": 23444, "deaths": 443 },
+    "2024-02-20": { "confirmed": 423, "recovered": 55, "deaths": 23 }
+  },
+  "AO": {
+    "2024-03-02": { "confirmed": 54787, "recovered": 534, "deaths": 874 },
+    "2024-03-01": { "confirmed": 2378, "recovered": 473, "deaths": 86 },
+    "2024-02-29": { "confirmed": 83567, "recovered": 326, "deaths": 574 },
+    "2024-02-28": { "confirmed": 768476, "recovered": 23432, "deaths": 2335 },
+    "2024-02-27": { "confirmed": 3455, "recovered": 234, "deaths": 654 },
+    "2024-02-26": { "confirmed": 2346, "recovered": 77, "deaths": 455 },
+    "2024-02-25": { "confirmed": 2545, "recovered": 123, "deaths": 12 },
+    "2024-02-24": { "confirmed": 7777, "recovered": 21345, "deaths": 566 },
+    "2024-02-23": { "confirmed": 23434, "recovered": 2344, "deaths": 663 },
+    "2024-02-22": { "confirmed": 12212, "recovered": 5535, "deaths": 234 },
+    "2024-02-21": { "confirmed": 77564, "recovered": 23444, "deaths": 443 },
+    "2024-02-20": { "confirmed": 423, "recovered": 55, "deaths": 23 }
+  },
+  "AG": {
+    "2024-03-02": { "confirmed": 54787, "recovered": 534, "deaths": 874 },
+    "2024-03-01": { "confirmed": 2378, "recovered": 473, "deaths": 86 },
+    "2024-02-29": { "confirmed": 83567, "recovered": 326, "deaths": 574 },
+    "2024-02-28": { "confirmed": 768476, "recovered": 23432, "deaths": 2335 },
+    "2024-02-27": { "confirmed": 3455, "recovered": 234, "deaths": 654 },
+    "2024-02-26": { "confirmed": 2346, "recovered": 77, "deaths": 455 },
+    "2024-02-25": { "confirmed": 2545, "recovered": 123, "deaths": 12 },
+    "2024-02-24": { "confirmed": 7777, "recovered": 21345, "deaths": 566 },
+    "2024-02-23": { "confirmed": 23434, "recovered": 2344, "deaths": 663 },
+    "2024-02-22": { "confirmed": 12212, "recovered": 5535, "deaths": 234 },
+    "2024-02-21": { "confirmed": 77564, "recovered": 23444, "deaths": 443 },
+    "2024-02-20": { "confirmed": 423, "recovered": 55, "deaths": 23 }
+  },
+  "AR": {
+    "2024-03-02": { "confirmed": 54787, "recovered": 534, "deaths": 874 },
+    "2024-03-01": { "confirmed": 2378, "recovered": 473, "deaths": 86 },
+    "2024-02-29": { "confirmed": 83567, "recovered": 326, "deaths": 574 },
+    "2024-02-28": { "confirmed": 768476, "recovered": 23432, "deaths": 2335 },
+    "2024-02-27": { "confirmed": 3455, "recovered": 234, "deaths": 654 },
+    "2024-02-26": { "confirmed": 2346, "recovered": 77, "deaths": 455 },
+    "2024-02-25": { "confirmed": 2545, "recovered": 123, "deaths": 12 },
+    "2024-02-24": { "confirmed": 7777, "recovered": 21345, "deaths": 566 },
+    "2024-02-23": { "confirmed": 23434, "recovered": 2344, "deaths": 663 },
+    "2024-02-22": { "confirmed": 12212, "recovered": 5535, "deaths": 234 },
+    "2024-02-21": { "confirmed": 77564, "recovered": 23444, "deaths": 443 },
+    "2024-02-20": { "confirmed": 423, "recovered": 55, "deaths": 23 }
+  },
+  "AM": {
+    "2024-03-02": { "confirmed": 54787, "recovered": 534, "deaths": 874 },
+    "2024-03-01": { "confirmed": 2378, "recovered": 473, "deaths": 86 },
+    "2024-02-29": { "confirmed": 83567, "recovered": 326, "deaths": 574 },
+    "2024-02-28": { "confirmed": 768476, "recovered": 23432, "deaths": 2335 },
+    "2024-02-27": { "confirmed": 3455, "recovered": 234, "deaths": 654 },
+    "2024-02-26": { "confirmed": 2346, "recovered": 77, "deaths": 455 },
+    "2024-02-25": { "confirmed": 2545, "recovered": 123, "deaths": 12 },
+    "2024-02-24": { "confirmed": 7777, "recovered": 21345, "deaths": 566 },
+    "2024-02-23": { "confirmed": 23434, "recovered": 2344, "deaths": 663 },
+    "2024-02-22": { "confirmed": 12212, "recovered": 5535, "deaths": 234 },
+    "2024-02-21": { "confirmed": 77564, "recovered": 23444, "deaths": 443 },
+    "2024-02-20": { "confirmed": 423, "recovered": 55, "deaths": 23 }
+  },
+  "AU": {
+    "2024-03-02": { "confirmed": 54787, "recovered": 534, "deaths": 874 },
+    "2024-03-01": { "confirmed": 2378, "recovered": 473, "deaths": 86 },
+    "2024-02-29": { "confirmed": 83567, "recovered": 326, "deaths": 574 },
+    "2024-02-28": { "confirmed": 768476, "recovered": 23432, "deaths": 2335 },
+    "2024-02-27": { "confirmed": 3455, "recovered": 234, "deaths": 654 },
+    "2024-02-26": { "confirmed": 2346, "recovered": 77, "deaths": 455 },
+    "2024-02-25": { "confirmed": 2545, "recovered": 123, "deaths": 12 },
+    "2024-02-24": { "confirmed": 7777, "recovered": 21345, "deaths": 566 },
+    "2024-02-23": { "confirmed": 23434, "recovered": 2344, "deaths": 663 },
+    "2024-02-22": { "confirmed": 12212, "recovered": 5535, "deaths": 234 },
+    "2024-02-21": { "confirmed": 77564, "recovered": 23444, "deaths": 443 },
+    "2024-02-20": { "confirmed": 423, "recovered": 55, "deaths": 23 }
+  },
+  "AT": {
+    "2024-03-02": { "confirmed": 54787, "recovered": 534, "deaths": 874 },
+    "2024-03-01": { "confirmed": 2378, "recovered": 473, "deaths": 86 },
+    "2024-02-29": { "confirmed": 83567, "recovered": 326, "deaths": 574 },
+    "2024-02-28": { "confirmed": 768476, "recovered": 23432, "deaths": 2335 },
+    "2024-02-27": { "confirmed": 3455, "recovered": 234, "deaths": 654 },
+    "2024-02-26": { "confirmed": 2346, "recovered": 77, "deaths": 455 },
+    "2024-02-25": { "confirmed": 2545, "recovered": 123, "deaths": 12 },
+    "2024-02-24": { "confirmed": 7777, "recovered": 21345, "deaths": 566 },
+    "2024-02-23": { "confirmed": 23434, "recovered": 2344, "deaths": 663 },
+    "2024-02-22": { "confirmed": 12212, "recovered": 5535, "deaths": 234 },
+    "2024-02-21": { "confirmed": 77564, "recovered": 23444, "deaths": 443 },
+    "2024-02-20": { "confirmed": 423, "recovered": 55, "deaths": 23 }
+  },
+  "AZ": {
+    "2024-03-02": { "confirmed": 54787, "recovered": 534, "deaths": 874 },
+    "2024-03-01": { "confirmed": 2378, "recovered": 473, "deaths": 86 },
+    "2024-02-29": { "confirmed": 83567, "recovered": 326, "deaths": 574 },
+    "2024-02-28": { "confirmed": 768476, "recovered": 23432, "deaths": 2335 },
+    "2024-02-27": { "confirmed": 3455, "recovered": 234, "deaths": 654 },
+    "2024-02-26": { "confirmed": 2346, "recovered": 77, "deaths": 455 },
+    "2024-02-25": { "confirmed": 2545, "recovered": 123, "deaths": 12 },
+    "2024-02-24": { "confirmed": 7777, "recovered": 21345, "deaths": 566 },
+    "2024-02-23": { "confirmed": 23434, "recovered": 2344, "deaths": 663 },
+    "2024-02-22": { "confirmed": 12212, "recovered": 5535, "deaths": 234 },
+    "2024-02-21": { "confirmed": 77564, "recovered": 23444, "deaths": 443 },
+    "2024-02-20": { "confirmed": 423, "recovered": 55, "deaths": 23 }
+  },
+  "BS": {
+    "2024-03-02": { "confirmed": 54787, "recovered": 534, "deaths": 874 },
+    "2024-03-01": { "confirmed": 2378, "recovered": 473, "deaths": 86 },
+    "2024-02-29": { "confirmed": 83567, "recovered": 326, "deaths": 574 },
+    "2024-02-28": { "confirmed": 768476, "recovered": 23432, "deaths": 2335 },
+    "2024-02-27": { "confirmed": 3455, "recovered": 234, "deaths": 654 },
+    "2024-02-26": { "confirmed": 2346, "recovered": 77, "deaths": 455 },
+    "2024-02-25": { "confirmed": 2545, "recovered": 123, "deaths": 12 },
+    "2024-02-24": { "confirmed": 7777, "recovered": 21345, "deaths": 566 },
+    "2024-02-23": { "confirmed": 23434, "recovered": 2344, "deaths": 663 },
+    "2024-02-22": { "confirmed": 12212, "recovered": 5535, "deaths": 234 },
+    "2024-02-21": { "confirmed": 77564, "recovered": 23444, "deaths": 443 },
+    "2024-02-20": { "confirmed": 423, "recovered": 55, "deaths": 23 }
+  },
+  "BH": {
+    "2024-03-02": { "confirmed": 54787, "recovered": 534, "deaths": 874 },
+    "2024-03-01": { "confirmed": 2378, "recovered": 473, "deaths": 86 },
+    "2024-02-29": { "confirmed": 83567, "recovered": 326, "deaths": 574 },
+    "2024-02-28": { "confirmed": 768476, "recovered": 23432, "deaths": 2335 },
+    "2024-02-27": { "confirmed": 3455, "recovered": 234, "deaths": 654 },
+    "2024-02-26": { "confirmed": 2346, "recovered": 77, "deaths": 455 },
+    "2024-02-25": { "confirmed": 2545, "recovered": 123, "deaths": 12 },
+    "2024-02-24": { "confirmed": 7777, "recovered": 21345, "deaths": 566 },
+    "2024-02-23": { "confirmed": 23434, "recovered": 2344, "deaths": 663 },
+    "2024-02-22": { "confirmed": 12212, "recovered": 5535, "deaths": 234 },
+    "2024-02-21": { "confirmed": 77564, "recovered": 23444, "deaths": 443 },
+    "2024-02-20": { "confirmed": 423, "recovered": 55, "deaths": 23 }
+  },
+  "BD": {
+    "2024-03-02": { "confirmed": 54787, "recovered": 534, "deaths": 874 },
+    "2024-03-01": { "confirmed": 2378, "recovered": 473, "deaths": 86 },
+    "2024-02-29": { "confirmed": 83567, "recovered": 326, "deaths": 574 },
+    "2024-02-28": { "confirmed": 768476, "recovered": 23432, "deaths": 2335 },
+    "2024-02-27": { "confirmed": 3455, "recovered": 234, "deaths": 654 },
+    "2024-02-26": { "confirmed": 2346, "recovered": 77, "deaths": 455 },
+    "2024-02-25": { "confirmed": 2545, "recovered": 123, "deaths": 12 },
+    "2024-02-24": { "confirmed": 7777, "recovered": 21345, "deaths": 566 },
+    "2024-02-23": { "confirmed": 23434, "recovered": 2344, "deaths": 663 },
+    "2024-02-22": { "confirmed": 12212, "recovered": 5535, "deaths": 234 },
+    "2024-02-21": { "confirmed": 77564, "recovered": 23444, "deaths": 443 },
+    "2024-02-20": { "confirmed": 423, "recovered": 55, "deaths": 23 }
+  },
+  "BB": {
+    "2024-03-02": { "confirmed": 54787, "recovered": 534, "deaths": 874 },
+    "2024-03-01": { "confirmed": 2378, "recovered": 473, "deaths": 86 },
+    "2024-02-29": { "confirmed": 83567, "recovered": 326, "deaths": 574 },
+    "2024-02-28": { "confirmed": 768476, "recovered": 23432, "deaths": 2335 },
+    "2024-02-27": { "confirmed": 3455, "recovered": 234, "deaths": 654 },
+    "2024-02-26": { "confirmed": 2346, "recovered": 77, "deaths": 455 },
+    "2024-02-25": { "confirmed": 2545, "recovered": 123, "deaths": 12 },
+    "2024-02-24": { "confirmed": 7777, "recovered": 21345, "deaths": 566 },
+    "2024-02-23": { "confirmed": 23434, "recovered": 2344, "deaths": 663 },
+    "2024-02-22": { "confirmed": 12212, "recovered": 5535, "deaths": 234 },
+    "2024-02-21": { "confirmed": 77564, "recovered": 23444, "deaths": 443 },
+    "2024-02-20": { "confirmed": 423, "recovered": 55, "deaths": 23 }
+  },
+  "BY": {
+    "2024-03-02": { "confirmed": 54787, "recovered": 534, "deaths": 874 },
+    "2024-03-01": { "confirmed": 2378, "recovered": 473, "deaths": 86 },
+    "2024-02-29": { "confirmed": 83567, "recovered": 326, "deaths": 574 },
+    "2024-02-28": { "confirmed": 768476, "recovered": 23432, "deaths": 2335 },
+    "2024-02-27": { "confirmed": 3455, "recovered": 234, "deaths": 654 },
+    "2024-02-26": { "confirmed": 2346, "recovered": 77, "deaths": 455 },
+    "2024-02-25": { "confirmed": 2545, "recovered": 123, "deaths": 12 },
+    "2024-02-24": { "confirmed": 7777, "recovered": 21345, "deaths": 566 },
+    "2024-02-23": { "confirmed": 23434, "recovered": 2344, "deaths": 663 },
+    "2024-02-22": { "confirmed": 12212, "recovered": 5535, "deaths": 234 },
+    "2024-02-21": { "confirmed": 77564, "recovered": 23444, "deaths": 443 },
+    "2024-02-20": { "confirmed": 423, "recovered": 55, "deaths": 23 }
+  },
+  "BE": {
+    "2024-03-02": { "confirmed": 54787, "recovered": 534, "deaths": 874 },
+    "2024-03-01": { "confirmed": 2378, "recovered": 473, "deaths": 86 },
+    "2024-02-29": { "confirmed": 83567, "recovered": 326, "deaths": 574 },
+    "2024-02-28": { "confirmed": 768476, "recovered": 23432, "deaths": 2335 },
+    "2024-02-27": { "confirmed": 3455, "recovered": 234, "deaths": 654 },
+    "2024-02-26": { "confirmed": 2346, "recovered": 77, "deaths": 455 },
+    "2024-02-25": { "confirmed": 2545, "recovered": 123, "deaths": 12 },
+    "2024-02-24": { "confirmed": 7777, "recovered": 21345, "deaths": 566 },
+    "2024-02-23": { "confirmed": 23434, "recovered": 2344, "deaths": 663 },
+    "2024-02-22": { "confirmed": 12212, "recovered": 5535, "deaths": 234 },
+    "2024-02-21": { "confirmed": 77564, "recovered": 23444, "deaths": 443 },
+    "2024-02-20": { "confirmed": 423, "recovered": 55, "deaths": 23 }
+  },
+  "BZ": {
+    "2024-03-02": { "confirmed": 54787, "recovered": 534, "deaths": 874 },
+    "2024-03-01": { "confirmed": 2378, "recovered": 473, "deaths": 86 },
+    "2024-02-29": { "confirmed": 83567, "recovered": 326, "deaths": 574 },
+    "2024-02-28": { "confirmed": 768476, "recovered": 23432, "deaths": 2335 },
+    "2024-02-27": { "confirmed": 3455, "recovered": 234, "deaths": 654 },
+    "2024-02-26": { "confirmed": 2346, "recovered": 77, "deaths": 455 },
+    "2024-02-25": { "confirmed": 2545, "recovered": 123, "deaths": 12 },
+    "2024-02-24": { "confirmed": 7777, "recovered": 21345, "deaths": 566 },
+    "2024-02-23": { "confirmed": 23434, "recovered": 2344, "deaths": 663 },
+    "2024-02-22": { "confirmed": 12212, "recovered": 5535, "deaths": 234 },
+    "2024-02-21": { "confirmed": 77564, "recovered": 23444, "deaths": 443 },
+    "2024-02-20": { "confirmed": 423, "recovered": 55, "deaths": 23 }
+  },
+  "BJ": {
+    "2024-03-02": { "confirmed": 54787, "recovered": 534, "deaths": 874 },
+    "2024-03-01": { "confirmed": 2378, "recovered": 473, "deaths": 86 },
+    "2024-02-29": { "confirmed": 83567, "recovered": 326, "deaths": 574 },
+    "2024-02-28": { "confirmed": 768476, "recovered": 23432, "deaths": 2335 },
+    "2024-02-27": { "confirmed": 3455, "recovered": 234, "deaths": 654 },
+    "2024-02-26": { "confirmed": 2346, "recovered": 77, "deaths": 455 },
+    "2024-02-25": { "confirmed": 2545, "recovered": 123, "deaths": 12 },
+    "2024-02-24": { "confirmed": 7777, "recovered": 21345, "deaths": 566 },
+    "2024-02-23": { "confirmed": 23434, "recovered": 2344, "deaths": 663 },
+    "2024-02-22": { "confirmed": 12212, "recovered": 5535, "deaths": 234 },
+    "2024-02-21": { "confirmed": 77564, "recovered": 23444, "deaths": 443 },
+    "2024-02-20": { "confirmed": 423, "recovered": 55, "deaths": 23 }
+  },
+  "BT": {
+    "2024-03-02": {
+      "confirmed": 54787,
+      "recovered": 534,
+      "deaths": 874
+    },
+    "2024-03-01": {
+      "confirmed": 2378,
+      "recovered": 473,
+      "deaths": 86
+    },
+    "2024-02-29": {
+      "confirmed": 83567,
+      "recovered": 326,
+      "deaths": 574
+    },
+    "2024-02-28": {
+      "confirmed": 768476,
+      "recovered": 23432,
+      "deaths": 2335
+    },
+    "2024-02-27": {
+      "confirmed": 3455,
+      "recovered": 234,
+      "deaths": 654
+    },
+    "2024-02-26": {
+      "confirmed": 2346,
+      "recovered": 77,
+      "deaths": 455
+    },
+    "2024-02-25": {
+      "confirmed": 2545,
+      "recovered": 123,
+      "deaths": 12
+    },
+    "2024-02-24": {
+      "confirmed": 7777,
+      "recovered": 21345,
+      "deaths": 566
+    },
+    "2024-02-23": {
+      "confirmed": 23434,
+      "recovered": 2344,
+      "deaths": 663
+    },
+    "2024-02-22": {
+      "confirmed": 12212,
+      "recovered": 5535,
+      "deaths": 234
+    },
+    "2024-02-21": {
+      "confirmed": 77564,
+      "recovered": 23444,
+      "deaths": 443
+    },
+    "2024-02-20": {
+      "confirmed": 423,
+      "recovered": 55,
+      "deaths": 23
+    }
+  }
+}
