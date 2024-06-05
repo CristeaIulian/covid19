@@ -1,1 +1,0 @@
-{"ast":null,"code":"export var States = /*#__PURE__*/(() => {\n  (function (States) {\n    States[\"confirmed\"] = \"confirmed\";\n    States[\"recovered\"] = \"recovered\";\n    States[\"deaths\"] = \"deaths\";\n  })(States || (States = {}));\n  return States;\n})();","map":null,"metadata":{},"sourceType":"module","externalDependencies":[]}
