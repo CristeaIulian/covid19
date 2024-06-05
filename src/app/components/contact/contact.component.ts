@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { UntypedFormGroup, UntypedFormControl, Validators } from '@angular/forms';
 
 import { MatSnackBar } from '@angular/material/snack-bar';
 
@@ -9,11 +9,11 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   styleUrls: ['./contact.component.scss'],
 })
 export class ContactComponent {
-  contactForm = new FormGroup({
-    email: new FormControl('', [Validators.required, Validators.email]),
-    firstName: new FormControl('', [Validators.required]),
-    lastName: new FormControl('', []),
-    comment: new FormControl('', [Validators.required]),
+  contactForm = new UntypedFormGroup({
+    email: new UntypedFormControl('', [Validators.required, Validators.email]),
+    firstName: new UntypedFormControl('', [Validators.required]),
+    lastName: new UntypedFormControl('', []),
+    comment: new UntypedFormControl('', [Validators.required]),
   });
 
   constructor(private snackBar: MatSnackBar) {}

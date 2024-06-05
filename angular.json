@@ -85,7 +85,6 @@
       }
     }
   },
-  "defaultProject": "covid19",
   "cli": {
     "analytics": "02d54d27-5e55-481d-ae00-6d5002609d19"
   }
