@@ -1,3 +1,5 @@
+import { SeriesOptionsType } from 'highcharts';
+
 export enum States {
   confirmed = 'confirmed',
   recovered = 'recovered',
@@ -21,16 +23,9 @@ export interface CountryInfoFull {
   partial: CountryInfo[];
 }
 
-interface HighchartsData {
-  name: string;
-  data: number[];
-  _colorIndex?: number;
-  _symbolIndex?: number;
-}
-
 export interface GraphStructure {
   categories: string[];
-  series: HighchartsData[];
+  series: SeriesOptionsType[];
 }
 
 export interface Status {

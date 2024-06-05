@@ -14,8 +14,6 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 
-import { ChartModule } from 'angular-highcharts';
-
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './components/app/app.component';
@@ -29,7 +27,6 @@ import { ReportsComponent } from './components/reports/reports.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     BrowserModule,
-    ChartModule,
     FormsModule,
     HttpClientModule,
     MatButtonModule,

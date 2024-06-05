@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 
 import { CountryInfoFull, GraphStructure, States, Status, StatusDetails } from '../../interfaces';
+import { SeriesOptionsType } from 'highcharts';
 
 @Injectable({ providedIn: 'root' })
 export class CovidService {
@@ -23,16 +24,17 @@ export class CovidService {
 
     const categories = Object.keys(oCategories).sort();
 
-    const series = [];
+    const series: SeriesOptionsType[] = [];
     countriesSelected.forEach((countrySlug): void => {
-      const newSeries = {
+      const newSeries: SeriesOptionsType = {
         name: this.getCountryName(countrySlug, countries),
         data: Array(categories.length).fill(0),
+        type: 'line',
       };
 
       Object.keys(data[countrySlug]).forEach((date): void => {
         const dateIndex = categories.indexOf(date);
-        newSeries.data[dateIndex] = data[countrySlug][date][peopleStatus];
+        newSeries.data[dateIndex] = [date, data[countrySlug][date][peopleStatus]] as [string, number];
       });
       series.push(newSeries);
     });

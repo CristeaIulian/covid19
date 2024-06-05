@@ -10,16 +10,13 @@
     "module": "es2020",
     "moduleResolution": "node",
     "importHelpers": true,
-    "target": "es2015",
-    "lib": [
-      "es2018",
-      "dom"
-    ],
+    "target": "es2018",
+    "lib": ["es2018", "dom"],
     "resolveJsonModule": true,
     "esModuleInterop": true
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
-    "strictInjectionParameters": true
+    "strictInjectionParameters": false
   }
 }

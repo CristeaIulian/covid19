@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { PageEvent } from '@angular/material/paginator';
 import { MatRadioChange } from '@angular/material/radio';
 
-import { Chart } from 'angular-highcharts';
+import * as Highcharts from 'highcharts';
 
 import { CovidService } from '../../services/covid/covid.service';
 
@@ -17,7 +17,6 @@ import countries from '../../mocks/countries.json';
   styleUrls: ['./reports.component.scss'],
 })
 export class ReportsComponent implements OnInit {
-  angularHighcharts: Chart;
   countries = {
     full: [],
     partial: [],
@@ -47,7 +46,7 @@ export class ReportsComponent implements OnInit {
       this.covidService.getCurrentState(this.peopleStatuses),
     );
 
-    this.angularHighcharts = new Chart({
+    const chart = Highcharts.chart('chart-line', {
       chart: {
         type: 'line',
       },
@@ -57,12 +56,28 @@ export class ReportsComponent implements OnInit {
       credits: {
         enabled: false,
       },
-      xAxis: {
-        categories,
+      legend: {
+        enabled: true,
       },
-      // @ts-ignore
+      yAxis: {
+        title: {
+          text: 'cases',
+        },
+      },
+      xAxis: {
+        type: 'category',
+      },
+      categories: {
+        data: categories,
+      },
+      tooltip: {
+        headerFormat: `<div>Date: {point.key}</div>`,
+        pointFormat: `<div>{series.name}: {point.y}</div>`,
+        shared: true,
+        useHTML: true,
+      },
       series,
-    });
+    } as any);
   }
 
   getCountries(): void {
