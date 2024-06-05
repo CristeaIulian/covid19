@@ -7,6 +7,7 @@ import { HttpService } from '../../services/http/http.service';
 import { CovidService } from '../../services/covid/covid.service';
 
 import { CountryInfo, PaginatorPreviousPage, States } from '../../interfaces';
+import * as Highcharts from "highcharts";
 
 @Component({
   selector: 'app-reports',
@@ -62,7 +63,7 @@ export class ReportsComponent implements OnInit {
       xAxis: {
         categories
       },
-      series
+      // series
     });
   }
 
