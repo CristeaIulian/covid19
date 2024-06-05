@@ -1,3 +1,4 @@
+@use '~@angular/material' as mat;
 @import './themes/glass.scss';
 
 $elementsPrimaryBgColor: $primary;
@@ -6,7 +7,7 @@ $elementsPrimaryColor: #ffffff;
 $elementsAccentBgColor: $accent;
 $elementsAccentColor: #ffffff;
 
-$elementsWarnBgColor: mat-color($my-app-warn, 900);
+$elementsWarnBgColor: mat.get-color-from-palette($my-app-warn, 900);
 $elementsWarnColor: #ffffff;
 
 $backgroundPath: "pandemic-background.jpg";
@@ -14,11 +15,11 @@ $backgroundPath: "pandemic-background.jpg";
 $backgroundNormalTransparent: transparentize($primary, .5);
 $backgroundLightTransparent: transparentize($primary, .8);
 $backgroundDarkTransparent: transparentize($primary, .2);
-$backgroundAccentTransparent: transparentize(mat-color($my-app-warn, 900), .3);
+$backgroundAccentTransparent: transparentize(mat.get-color-from-palette($my-app-warn, 900), .3);
 
 $confirmedColor: #ffcb39;
 $recoveredColor: #1efb03;
-$deathColor: mat-color($my-app-warn, 500);
+$deathColor: mat.get-color-from-palette($my-app-warn, 500);
 $deathColorSelected: #000000;
 
-$pillBorder: mat-color($my-app-warn, 400);
+$pillBorder: mat.get-color-from-palette($my-app-warn, 400);

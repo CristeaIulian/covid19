@@ -1,3 +1,4 @@
+@use '~@angular/material' as mat;
 @import '../../../variables.scss';
 
 form {
@@ -10,14 +11,14 @@ form {
     width: 100%;
 
     mat-label {
-      color: mat-color($my-app-accent, 100);
+      color: mat.get-color-from-palette($my-app-accent, 100);
     }
 
     input {
-      caret-color: mat-color($my-app-accent, 100);
+      caret-color: mat.get-color-from-palette($my-app-accent, 100);
 
       ::placeholder {
-        color: mat-color($my-app-accent, 100);
+        color: mat.get-color-from-palette($my-app-accent, 100);
       }
     }
   }
