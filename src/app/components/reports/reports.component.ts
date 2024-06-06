@@ -1,14 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-// import { LegacyPageEvent as PageEvent } from '@angular/material/legacy-paginator';
-import { PageEvent } from '@angular/material/paginator';
-// import { MatLegacyRadioChange as MatRadioChange } from '@angular/material/legacy-radio';
-import { MatRadioChange } from '@angular/material/radio';
 
 import * as Highcharts from 'highcharts';
 
 import { CovidService } from '../../services/covid/covid.service';
 
-import { CountryInfo, States } from '../../interfaces';
+import { CountryInfo, CountryInfoFull, States, Status } from '../../interfaces';
 
 import dataByCountry from '../../mocks/by_country.json';
 import countries from '../../mocks/countries.json';
@@ -19,20 +15,38 @@ import countries from '../../mocks/countries.json';
   styleUrls: ['./reports.component.scss'],
 })
 export class ReportsComponent implements OnInit {
-  countries = {
+  countries: CountryInfoFull = {
     full: [],
     partial: [],
   };
-  countriesSelected = [];
-  data = [];
+  countriesSelected: string[] = [];
+  data: Record<string, Status>[] = [];
   pageSize = 10;
+
   peopleStatuses = [
-    { value: States.confirmed, checked: true },
-    { value: States.recovered, checked: false },
-    { value: States.deaths, checked: false },
+    {
+      label: States.confirmed,
+      value: States.confirmed,
+      isChecked: true,
+    },
+    {
+      label: States.recovered,
+      value: States.recovered,
+      isChecked: false,
+    },
+    {
+      label: States.deaths,
+      value: States.deaths,
+      isChecked: false,
+    },
   ];
-  peopleStateSelected = 'confirmed';
   showHighcharts = false;
+  public pagination = {
+    pageSize: 10,
+    pageIndex: 0,
+    pageSizeOptions: [10, 25, 50, 100, 500, 1000],
+    length: 0,
+  };
 
   constructor(private covidService: CovidService) {}
 
@@ -85,13 +99,16 @@ export class ReportsComponent implements OnInit {
   getCountries(): void {
     this.countries.full = countries;
     this.countries.partial = this.countries.full.slice(0, this.pageSize);
+    this.pagination.length = this.countries.full.length;
   }
 
   chipClick(country: CountryInfo): void {
     this.countries.partial.forEach((item, index) => {
       if (country.index === item.index) {
         this.countries.partial[index].selected = !item.selected;
-        this.countries.partial[index].color = item.selected ? 'primary' : 'secondary';
+        this.countries.partial[index].color = item.selected
+          ? 'primary'
+          : 'secondary';
         if (item.selected) {
           this.countriesSelected.push(item.slug);
         } else {
@@ -107,8 +124,11 @@ export class ReportsComponent implements OnInit {
   }
 
   getDataByCountry(country: CountryInfo): void {
+    // @ts-ignore
     if (!this.data[country.slug]) {
+      // @ts-ignore
       this.data[country.slug] = dataByCountry[country.countryCode];
+
       this.generateGraph();
       this.showHighcharts = true;
     } else {
@@ -116,14 +136,27 @@ export class ReportsComponent implements OnInit {
     }
   }
 
-  changeState(e: MatRadioChange) {
+  public onCheckedItem = (checkedItem: number | string): void => {
     this.peopleStatuses.forEach((status, index) => {
-      this.peopleStatuses[index].checked = e.value === status.value;
+      this.peopleStatuses[index].isChecked = checkedItem === status.value;
     });
     this.generateGraph();
+  };
+
+  onPageChanged(newPageNumber: number): void {
+    this.pagination.pageIndex = newPageNumber;
+    this.filterDataByPaginator();
   }
 
-  handlePage($event: PageEvent): void {
-    this.countries.partial = this.countries.full.slice($event.pageIndex * $event.pageSize, ($event.pageIndex + 1) * $event.pageSize);
+  public onRecordsPerPageChanged(newRecordsPerPage: number): void {
+    this.pagination.pageSize = newRecordsPerPage;
+    this.filterDataByPaginator();
+  }
+
+  public filterDataByPaginator(): void {
+    this.countries.partial = this.countries.full.slice(
+      this.pagination.pageIndex * this.pagination.pageSize,
+      (this.pagination.pageIndex + 1) * this.pagination.pageSize,
+    );
   }
 }

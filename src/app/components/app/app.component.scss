@@ -1,9 +1,10 @@
-@import '../../../variables.scss';
+$backgroundPath: "pandemic-background.jpg";
 
 .main {
   &::after {
     content: "";
-    background-image: url("/assets/"+ $backgroundPath);
+    background-color: #233d54;
+    background-image: url("/" + $backgroundPath);
     top: 0;
     left: 0;
     bottom: 0;
@@ -23,11 +24,12 @@
     left: 50%;
     transform: translate(-50%, -50%);
     position: absolute;
-    color: $elementsPrimaryColor;
+    color: #ffffff;
 
     &::after {
       content: "";
-      background-image: url("/assets/"+ $backgroundPath);
+      background-color: #233d54;
+      background-image: url("/" + $backgroundPath);
       background-position: calc((100vw - 1000px) / 2 * -1) calc((100vh - 100vh - 100px));
       top: 0;
       left: 0;
@@ -48,15 +50,14 @@
 
       div {
         align-items: center;
-        flex: 1;
-        padding: 5px;
+        padding: 2px;
         text-align: center;
 
         button {
           width: 100%;
 
           &.active {
-            //background-color: $backgroundDarkTransparent;
+            background-color: #212121cc;
           }
         }
       }
@@ -87,5 +88,5 @@
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #233D54;
+  background: #233d54;
 }

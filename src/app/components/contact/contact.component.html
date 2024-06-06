@@ -1,46 +1,48 @@
 <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
-  <div class="row">
-    <div class="col-12">
-      Please provide some brief details about your problem, suggestion or issue.
+    <div class="row">
+        <div class="col-12">Please provide some brief details about your problem, suggestion or issue.</div>
+        <div class="col-6">
+            <mem-form-field>
+                <label>First name</label>
+                <mem-input-text formControlName="firstName"></mem-input-text>
+                <div class="mem-form-error" *ngIf="contactForm.get('firstName')?.hasError('required') && contactForm.get('firstName')?.dirty">
+                    First name is <strong>required</strong>
+                </div>
+            </mem-form-field>
+        </div>
+        <div class="col-6">
+            <mem-form-field>
+                <label>Last Name</label>
+                <mem-input-text formControlName="lastName" />
+            </mem-form-field>
+        </div>
+        <div class="col-12">
+            <mem-form-field>
+                <label>Email</label>
+                <mem-input-text formControlName="email" placeholder="Ex. pat@example.com" />
+
+                <div
+                    class="mem-form-error"
+                    *ngIf="contactForm.get('email')?.hasError('email') && !contactForm.get('email')?.hasError('required') && contactForm.get('email')?.dirty"
+                >
+                    Please enter a valid email address
+                </div>
+                <div class="mem-form-error" *ngIf="contactForm.get('email')?.hasError('required') && contactForm.get('email')?.dirty">
+                    Email is <strong>required</strong>
+                </div>
+            </mem-form-field>
+        </div>
+        <div class="col-12">
+            <mem-form-field>
+                <label>Leave a comment</label>
+                <mem-textarea formControlName="comment" />
+                <div class="mem-form-error" *ngIf="contactForm.get('comment')?.hasError('required') && contactForm.get('comment')?.dirty">
+                    Comment is <strong>required</strong>
+                </div>
+            </mem-form-field>
+        </div>
+        <div class="col-12">
+            <button memButton memVariant="contained" [memRipple]="true" [disabled]="!contactForm.valid">Contact Us!</button>
+        </div>
     </div>
-    <div class="col-6">
-      <mat-form-field>
-        <mat-label>First name</mat-label>
-        <input matInput formControlName="firstName" />
-        <mat-error *ngIf="contactForm.get('firstName').hasError('required')">
-          First name is <strong>required</strong>
-        </mat-error>
-      </mat-form-field>
-    </div>
-    <div class="col-6">
-      <mat-form-field>
-        <mat-label>Last Name</mat-label>
-        <input matInput formControlName="lastName" />
-      </mat-form-field>
-    </div>
-    <div class="col-12">
-      <mat-form-field>
-        <mat-label>Email</mat-label>
-        <input matInput formControlName="email" placeholder="Ex. pat@example.com" />
-        <mat-error *ngIf="contactForm.get('email').hasError('email') && !contactForm.get('email').hasError('required')">
-          Please enter a valid email address
-        </mat-error>
-        <mat-error *ngIf="contactForm.get('email').hasError('required')">
-          Email is <strong>required</strong>
-        </mat-error>
-      </mat-form-field>
-    </div>
-    <div class="col-12">
-      <mat-form-field>
-        <mat-label>Leave a comment</mat-label>
-        <textarea matInput formControlName="comment"></textarea>
-        <mat-error *ngIf="contactForm.get('comment').hasError('required')">
-          Comment is <strong>required</strong>
-        </mat-error>
-      </mat-form-field>
-    </div>
-    <div class="col-12">
-      <button mat-button mat-raised-button color="accent" [disabled]="!contactForm.valid">Contact Us!</button>
-    </div>
-  </div>
 </form>

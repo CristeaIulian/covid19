@@ -1,8 +1,11 @@
 import { Component } from '@angular/core';
-import { UntypedFormGroup, UntypedFormControl, Validators } from '@angular/forms';
+import {
+  UntypedFormGroup,
+  UntypedFormControl,
+  Validators,
+} from '@angular/forms';
 
-// import { MatLegacySnackBar as MatSnackBar } from '@angular/material/legacy-snack-bar';
-import { MatSnackBar } from '@angular/material/snack-bar';
+import { ToastService } from '@memobit/angular/services/toast/toast.service';
 
 @Component({
   selector: 'app-contact',
@@ -17,12 +20,14 @@ export class ContactComponent {
     comment: new UntypedFormControl('', [Validators.required]),
   });
 
-  constructor(private snackBar: MatSnackBar) {}
+  constructor(private toastService: ToastService) {}
 
   onSubmit(): void {
     console.log('response', this.contactForm.value);
-    this.snackBar.open('Your message has been save successfully!', 'Close', {
-      duration: 2000,
+
+    this.toastService.show({
+      message: 'Your message has been save successfully!',
+      timeout: 2000,
     });
   }
 }

@@ -1,40 +1,36 @@
-@import '../../../variables.scss';
-
 .reports_container {
   .countries {
-    mat-chip-list {
+    .tags {
       display: flex;
-      align-items: stretch;
+      gap: 8px;
       flex-wrap: wrap;
-      width: calc(100% - 5px);
-      min-height: 232px;
 
-      mat-chip {
-        //background-color: $backgroundNormalTransparent;
-        color: $elementsPrimaryColor;
-        text-shadow: 0 1px 1px #000;
+      ::ng-deep .tag {
+        background-color: #21212180;
+        border: 1px solid #064348;
+        color: #ffffff;
+        border-radius: 4px;
+
+        .country-name {
+          margin-right: 4px;
+        }
 
         .confirmed {
-          color: $confirmedColor;
+          color: #ffcb39;
         }
 
         .recovered {
-          color: $recoveredColor;
+          color: #1efb03;
         }
 
         .death {
-          //color: $deathColor;
+          color: #eb8282;
         }
+      }
 
-        &.mat-chip-selected {
-          //background-color: $backgroundAccentTransparent;
-          //border: 1px solid $pillBorder;
-
-          .death {
-            color: $deathColorSelected;
-            text-shadow: none;
-          }
-        }
+      mem-tag.selected ::ng-deep .tag {
+        background-color: rgba(191, 54, 12, 0.7);
+        border: 1px solid #ff7043;
       }
     }
 
@@ -44,27 +40,6 @@
 
       .status {
         flex: 1;
-
-        .mat-radio-button {
-          margin-right: 10px;
-        }
-      }
-
-      mat-paginator {
-        flex: 1;
-        //background-color: $elementsAccentBgColor;
-        color: $elementsAccentColor;
-
-        ::ng-deep {
-          .mat-paginator-container {
-            min-height: 30px;
-
-            .mat-button-base {
-              line-height: 28px;
-              height: 28px;
-            }
-          }
-        }
       }
 
       @media (max-width: 840px) {

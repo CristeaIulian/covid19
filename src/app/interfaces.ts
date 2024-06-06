@@ -14,8 +14,8 @@ export interface CountryInfo {
   totalDeaths: number;
   totalRecovered: number;
   index: number;
-  selected: boolean;
-  color: string;
+  selected?: boolean;
+  color?: string;
 }
 
 export interface CountryInfoFull {
@@ -35,6 +35,7 @@ export interface Status {
 }
 
 export interface StatusDetails {
+  label: States;
   value: States;
-  checked: boolean;
+  isChecked: boolean;
 }

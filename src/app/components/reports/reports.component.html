@@ -1,44 +1,38 @@
 <div class="reports_container">
-    <div class="countries">
-        <!--        <mat-chip-list>-->
-        <!--            <mat-chip>One fish</mat-chip>-->
-        <!--            <mat-chip>Two fish</mat-chip>-->
-        <!--            <mat-chip color="primary" selected>Primary fish</mat-chip>-->
-        <!--            <mat-chip color="accent" selected>Accent fish</mat-chip>-->
-        <!--        </mat-chip-list>-->
+  <div class="countries">
+    <div class="tags">
+        <mem-tag *ngFor="let country of countries.partial" (click)="chipClick(country)" [class]="{'selected': country.selected}">
+          <span class="country-name">{{ country.countryName }}</span>
+          <span>(</span>
+          <span class="confirmed" title="{{ country.totalConfirmed }} confirmed">{{ country.totalConfirmed }}</span>
+          <span>:</span>
+          <span>[</span>
+          <span class="recovered" title=" {{ country.totalRecovered }} recovered">{{ country.totalRecovered }}</span>
+          <span>/</span>
+          <span class="death" title=" {{ country.totalDeaths }} deaths">{{country.totalDeaths }}</span>
+          <span>]</span>
+          <span>)</span>
+        </mem-tag>
+    </div>
 
-        <!--        <mat-chip-list [multiple]="true">-->
-        <!--            <mat-chip-->
-        <!--                *ngFor="let country of countries.partial"-->
-        <!--                [color]="country.color"-->
-        <!--                [selected]="country.selected"-->
-        <!--                (click)="chipClick(country)"-->
-        <!--                [selectable]="true"-->
-        <!--            >-->
-        <!--                {{ country.countryName }}-->
-        <!--                (-->
-        <!--                <span class="confirmed" title="{{ country.totalConfirmed }} confirmed">{{ country.totalConfirmed }}</span-->
-        <!--                >: [-->
-        <!--                <span class="recovered" title=" {{ country.totalRecovered }} recovered">{{ country.totalRecovered }}</span>-->
-        <!--                /-->
-        <!--                <span class="death" title=" {{ country.totalDeaths }} deaths">{{ country.totalDeaths }}</span>-->
-        <!--                ] )-->
-        <!--            </mat-chip>-->
-        <!--        </mat-chip-list>-->
-        <div class="control-bar">
-            <div class="status">
-                <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group" (change)="changeState($event)">
-                    <mat-radio-button class="example-radio-button" *ngFor="let status of peopleStatuses" [value]="status.value" [checked]="status.checked">
-                        {{ status.value }}
-                    </mat-radio-button>
-                </mat-radio-group>
-            </div>
-            <mat-paginator [length]="countries.full.length" [pageSize]="pageSize" (page)="handlePage($event)"></mat-paginator>
-        </div>
+    <div class="control-bar">
+      <div class="status">
+        <mem-radio
+          [items]="peopleStatuses"
+          (checkedItem)="onCheckedItem($event)"
+        ></mem-radio>
+      </div>
+      <mem-paginator
+        [numberOfRecords]="pagination.length"
+        [currentPage]="pagination.pageIndex"
+        [recordsPerPage]="pagination.pageSize"
+        [recordsPerPageOptions]="pagination.pageSizeOptions"
+        (pageChanged)="onPageChanged($event)"
+        (recordsPerPageChanged)="onRecordsPerPageChanged($event)"
+      ></mem-paginator>
     </div>
-    <div [hidden]="!showHighcharts">
-        <!--        <div [chart]="angularHighcharts" class="angular-highcharts"></div>-->
-        <!--        <highcharts-chart [Highcharts]="Highcharts" [options]="chartOptions" style="width: 100%; height: 400px; display: block"></highcharts-chart>-->
-        <div id="chart-line"></div>
-    </div>
+  </div>
+  <div [hidden]="!showHighcharts">
+    <div id="chart-line"></div>
+  </div>
 </div>

@@ -1,27 +1,8 @@
-/*@use '@angular/material' as mat;*/
-@import '../../../variables.scss';
-
 form {
   width: calc(100% - 20px);
   padding: 10px;
   margin: 0;
-  //background-color: $backgroundDarkTransparent;
-
-  .mat-form-field {
-    width: 100%;
-
-    mat-label {
-      /*color: mat.get-color-from-palette($my-app-accent, 100);*/
-    }
-
-    input {
-      /*caret-color: mat.get-color-from-palette($my-app-accent, 100);*/
-
-      ::placeholder {
-        /*color: mat.get-color-from-palette($my-app-accent, 100);*/
-      }
-    }
-  }
+  background-color: #212121cc;
 
   .row {
     display: flex;
@@ -43,7 +24,6 @@ form {
     }
 
     @media (max-width: 600px) {
-
       .col-6,
       .col-12 {
         flex: 0 0 100%;
